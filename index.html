@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <form id="myForm">
+      <input name="value_one">
+      <input name="value_two">
+    </form>
+
+    <button onclick="addition()">
+      Сложение
+    </button>
+    <button onclick="substraction()">
+      Вычетание
+    </button>
+    <button onclick="multiplication()">
+      Умножение
+    </button>
+    <button onclick="division()">
+      Деление
+    </button>
+    <div id=result></div>
+  </body>
+  <script>
+      let form = document.getElementById('myForm');
+      const result = 0;
+      function addition(result) {
+        result = Number(form.value_one.value) + Number(form.value_two.value);
+        let results = document.getElementById('result');
+        results.innerHTML = result;
+      }
+
+      function substraction(result) {
+        result = form.value_one.value - form.value_two.value;
+        let results = document.getElementById('result');
+        results.innerHTML = result
+      }
+
+      function multiplication(result) {
+        result = form.value_one.value * form.value_two.value;
+        let results = document.getElementById('result');
+        results.innerHTML = result;
+      }
+
+      function division(result) {
+        result = form.value_one.value / form.value_two.value;
+        let results = document.getElementById('result');
+        results.innerHTML = result;
+      }
+
+  </script>
+</html>
